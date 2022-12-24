@@ -1,0 +1,44 @@
+###
+get http://localhost:8080/states/
+
+###
+get http://localhost:8080/states/5/
+
+###
+post http://localhost:8080/districts/
+Content-Type: application/json
+
+{
+  "districtName": "Bagalkot",
+  "stateId": 3,
+  "cases": 2323,
+  "cured": 2000,
+  "active": 315,
+  "deaths": 8
+}
+
+### 
+get http://localhost:8080/districts/320/
+
+### 
+delete http://localhost:8080/districts/322/
+
+###
+put http://localhost:8080/districts/325/
+Content-Type: application/json
+
+{
+  "districtName": "Nadia",
+  "stateId": 3,
+  "cases": 9628,
+  "cured": 6524,
+  "active": 3000,
+  "deaths": 104
+}
+
+
+###
+get http://localhost:8080/states/10/stats/
+
+###
+get http://localhost:8080/districts/5/details/
